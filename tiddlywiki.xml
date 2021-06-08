@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tiddlywiki</Name>
+  <Repository>branehaven/tiddlywiki</Repository>
+  <Registry>https://hub.docker.com/r/branehaven/tiddlywiki/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/branehaven/tiddlywiki/</Support>
+  <Project/>
+  <Overview>Have you ever had the feeling that your head is not quite big enough to hold everything you need to remember?
+    Welcome to TiddlyWiki, a unique non-linear notebook for capturing, organising and sharing complex information.
+    Use it to keep your to-do list, to plan an essay or novel, or to organise your wedding.
+    Record every thought that crosses your brain, or build a flexible and responsive website.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://tiddlywiki.com/favicon.ico</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1623175667</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Have you ever had the feeling that your head is not quite big enough to hold everything you need to remember?
+    Welcome to TiddlyWiki, a unique non-linear notebook for capturing, organising and sharing complex information.
+    Use it to keep your to-do list, to plan an essay or novel, or to organise your wedding.
+    Record every thought that crosses your brain, or build a flexible and responsive website.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tiddlywiki</HostDir>
+      <ContainerDir>/var/lib/tiddlywiki</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>user</Value>
+      <Name>USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>wiki</Value>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Web UI" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Wiki Data" Target="/var/lib/tiddlywiki" Default="" Mode="rw" Description="Container Path: /var/lib/tiddlywiki" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tiddlywiki</Config>
+  <Config Name="User Name" Target="USERNAME" Default="user" Mode="" Description="Container Variable: USERNAME" Type="Variable" Display="always" Required="true" Mask="false">user</Config>
+  <Config Name="Password" Target="PASSWORD" Default="wiki" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="true" Mask="true">wiki</Config>
+</Container>
