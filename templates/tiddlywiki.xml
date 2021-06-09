@@ -16,7 +16,7 @@
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
-  <Icon>https://tiddlywiki.com/favicon.ico</Icon>
+  <Icon>https://raw.githubusercontent.com/branehaven/unRAID-CA-templates/main/templates/images/tiddlywiki.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
