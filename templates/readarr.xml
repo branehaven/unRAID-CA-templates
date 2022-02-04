@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>readarr</Name>
-  <Repository>linuxserver/readarr</Repository>
+  <Repository>linuxserver/readarr:nightly-alpine</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/readarr/</Registry>
   <Network>bridge</Network>
   <MyIP/>
