@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>readarr</Name>
+  <Repository>linuxserver/readarr</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/readarr/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/linuxserver/readarr/</Support>
+  <Project>https://readarr.com/</Project>
+  <Overview>&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/linuxserver/readarr/</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:8787]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/branehaven/unRAID-CA-templates/main/templates/images/readarr.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1643974462</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/linuxserver/readarr/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8787</HostPort>
+        <ContainerPort>8787</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/readarr</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/books</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>America/New_York</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/readarr" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/readarr</Config>
+  <Config Name="Host Path 2" Target="/books" Default="" Mode="rw" Description="Container Path: /books" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 3" Target="/downloads" Default="" Mode="rw" Description="Container path: /downloads" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Port 1" Target="8787" Default="8787" Mode="tcp" Description="Container Port: 8787" Type="Port" Display="always" Required="true" Mask="false">8787</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Key 3" Target="TZ" Default="America/New_York" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
+</Container>
